@@ -20,12 +20,6 @@
         dest: /var/www/html/index.html
     notify: restart webserver
 
-  - name : download internet file
-    get_url: 
-        url: https://get.jenkins.io/war-stable/2.375.1/jenkins.war
-        dest: /home/ubuntu/jenkins.war
-        force_basic_auth: yes
-    ignore_errors: true
 
     handlers: 
     - name: restart webserver
